@@ -38,10 +38,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,
 .dl-btn:hover{background:var(--amber-dark)}
 .dl-ver{font-size:13px;color:var(--text2);margin-top:14px}
 
-.dl-note{padding:0 60px 80px;max-width:900px;margin:0 auto}
+.dl-note{padding:0 60px 80px;max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
 .dl-note-card{background:var(--white);border:1.5px solid var(--border);border-radius:18px;padding:36px 40px}
+.dl-note-card.dl-warn{background:var(--amber-light);border-color:rgba(239,159,39,.3)}
 .dl-note h3{font-size:20px;font-weight:600;margin-bottom:16px}
 .dl-note p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:10px}
+.dl-note-card.dl-warn p{color:var(--text)}
+.dl-note-card.dl-warn code{background:rgba(239,159,39,.15);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,'SFMono-Regular',Consolas,monospace}
+.dl-note-card code{background:#eee;padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,'SFMono-Regular',Consolas,monospace}
 
 footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
 .ft-l{font-size:14px;color:var(--text2)}
@@ -100,10 +104,10 @@ footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify
 <div class="dl-info">
 <div class="dl-info-row"><span class="dl-info-label">安装包大小</span><span class="dl-info-value">3.4 MB</span></div>
 <div class="dl-info-row"><span class="dl-info-label">包含</span><span class="dl-info-value">桌面浮窗 + 系统托盘</span></div>
-<div class="dl-info-row"><span class="dl-info-label">格式</span><span class="dl-info-value">.deb（另有 AppImage）</span></div>
+<div class="dl-info-row"><span class="dl-info-label">格式</span><span class="dl-info-value">.deb</span></div>
 </div>
 <a href="downloads/Bumang_1.0.0_amd64.deb" class="dl-btn">下载 .deb</a>
-<div class="dl-ver">当前版本：v1.0.0 · <a href="downloads/Bumang_1.0.0_amd64.AppImage" style="color:var(--amber-dark);text-decoration:underline">AppImage 便携版</a></div>
+<div class="dl-ver">当前版本：v1.0.0</div>
 </div>
 </section>
 
@@ -113,7 +117,15 @@ footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify
 <p><strong>Android</strong>：下载 APK 后直接安装。首次安装可能需要在手机设置中允许"未知来源"应用安装。</p>
 <p><strong>Windows</strong>：下载后双击 .exe 安装包，按提示完成安装。安装完成后可在开始菜单找到"不忙"。</p>
 <p><strong>Ubuntu</strong>：下载 .deb 文件后，双击安装或在终端运行 <code>sudo dpkg -i Bumang_*.deb</code>。安装后在应用列表找到"不忙"启动。</p>
-<p><strong>Ubuntu（便携）</strong>：下载 AppImage 后执行 <code>chmod +x Bumang_*.AppImage</code>，直接运行即可，无需安装。适合没有 root 权限或想试用的场景。</p>
+</div>
+
+<div class="dl-note-card dl-warn">
+<h3>⚠ Windows 下载 / 安装时的风险提示怎么办</h3>
+<p>用 Edge / Chrome 下载 <code>Bumang_1.0.0_x64-setup.exe</code> 时，浏览器可能提示 "此文件不常下载，有风险"，双击运行后 Windows SmartScreen 也可能弹窗 "Windows 已保护你的电脑"。这是正常的 —— 因为"不忙"暂时没有购买 Microsoft 的代码签名证书（Authenticode），对新发布、下载量少的小工具 Windows 默认都会谨慎提示。</p>
+<p><strong>下载时</strong>：Edge 会在下载栏显示警告，点右侧的 <strong>"…" → 保留</strong>（或 "保留异常文件"）即可完成下载。Chrome 里点 <strong>"保留"</strong>。</p>
+<p><strong>运行安装包时</strong>：如果弹出 "Windows 已保护你的电脑" 蓝色窗口，点左下角 <strong>"更多信息"</strong>，然后点底部出现的 <strong>"仍要运行"</strong> 按钮。安装包会正常启动。</p>
+<p>安装完成之后不再出现任何提示，程序行为跟任何正常 Windows 应用一致。所有数据都存在你本地（<code>%APPDATA%\com.plantable.desktop\</code>），不联网、不上传。代码完全开源，可以自己看一遍再决定要不要信任：<a href="https://github.com/alin-go/plan-table" target="_blank" style="color:var(--amber-dark);text-decoration:underline">github.com/alin-go/plan-table</a>。</p>
+<p style="color:var(--text2);font-size:14px;margin-top:16px">未来付费版本会签名，届时此提示消失。</p>
 </div>
 </section>
 
