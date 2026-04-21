@@ -1,0 +1,20 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node / build outputs (if future static site generator added)
+node_modules/
+.cache/
+dist/
+.parcel-cache/
+
+# Env
+.env
+.env.local
+
+# AppImage (82 MB) — exceeds GitHub's 50 MB warn threshold. Track via Git LFS
+# or host as a GitHub Release asset and update the link in download.html.
+downloads/*.AppImage
