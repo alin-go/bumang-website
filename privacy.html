@@ -35,6 +35,26 @@ footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify
 .ft-r{display:flex;gap:24px}
 .ft-r a{font-size:14px;color:var(--text2);text-decoration:none}
 .ft-r a:hover{color:var(--text)}
+
+/* ========== mobile ========== */
+@media (max-width: 768px) {
+  nav { padding: 0 16px; height: 60px }
+  .n-links { display: none }
+  .n-name { font-size: 18px }
+  .n-icon { width: 34px; height: 34px }
+  .n-btn { padding: 8px 16px; font-size: 14px }
+
+  .privacy { padding: 100px 20px 60px }
+  .privacy h1 { font-size: 30px; letter-spacing: -.5px }
+  .privacy .update { font-size: 13px; margin-bottom: 32px }
+  .privacy h2 { font-size: 19px; margin-top: 30px; margin-bottom: 12px }
+  .privacy p, .privacy li { font-size: 15px; line-height: 1.8 }
+  .privacy ul { margin: 0 0 14px 20px }
+  .privacy .highlight { padding: 16px 18px }
+
+  footer { flex-direction: column; gap: 14px; padding: 24px 20px; text-align: center }
+  .ft-r { gap: 18px }
+}
 </style>
 </head>
 <body>

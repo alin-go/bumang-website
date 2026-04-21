@@ -87,6 +87,62 @@ footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify
 .ft-r{display:flex;gap:24px}
 .ft-r a{font-size:14px;color:var(--text2);text-decoration:none}
 .ft-r a:hover{color:var(--text)}
+
+/* ========== mobile ========== */
+@media (max-width: 768px) {
+  nav { padding: 0 16px; height: 60px }
+  .n-links { display: none }
+  .n-name { font-size: 18px }
+  .n-icon { width: 34px; height: 34px }
+  .n-btn { padding: 8px 16px; font-size: 14px }
+
+  .hero { padding: 90px 20px 40px; flex-direction: column; gap: 40px; text-align: center }
+  .hero-l { width: 100% }
+  .hero-t { font-size: 36px; letter-spacing: -1px; line-height: 1.2 }
+  .hero-badge { margin-bottom: 18px; font-size: 13px }
+  .hero-d { font-size: 16px; line-height: 1.7; margin: 0 auto 28px; max-width: 100% }
+  .hero-btns { justify-content: center; flex-wrap: wrap; gap: 10px }
+  .b-pri, .b-sec { padding: 14px 22px; font-size: 15px }
+  .hero-r { display: flex; justify-content: center; width: 100% }
+  .phone { transform: none; width: 240px; height: 440px }
+  .p-ht { font-size: 16px }
+  .p-ht, .p-tt, .p-tag { font-size: 13px }
+  .p-tabs { margin: 6px 12px 0 }
+  .p-tab { font-size: 12px }
+
+  .highlights { padding: 60px 20px 0; grid-template-columns: 1fr; gap: 14px }
+  .hl-card { padding: 28px 22px }
+  .hl-name { font-size: 18px }
+  .hl-desc { font-size: 15px }
+  .hl-icon { width: 44px; height: 44px; margin-bottom: 16px }
+
+  .feat, .themes, .plat { padding: 60px 20px }
+  .s-title { font-size: 28px; margin-bottom: 28px; letter-spacing: -.3px }
+  .s-label { font-size: 12px; letter-spacing: 1.5px }
+  .f-grid { grid-template-columns: 1fr; gap: 12px }
+  .f-card { padding: 24px 20px }
+  .f-name { font-size: 18px }
+  .f-desc { font-size: 14px }
+  .f-icon { width: 40px; height: 40px; margin-bottom: 14px }
+
+  .th-grid { flex-wrap: wrap; gap: 10px }
+  .th-card { flex: 1 1 calc(50% - 5px); min-width: 0; padding: 24px 12px }
+  .th-circle { width: 52px; height: 52px; margin-bottom: 10px }
+  .th-name { font-size: 16px }
+  .th-desc { font-size: 13px }
+
+  .pl-grid { grid-template-columns: 1fr; gap: 14px }
+  .pl-card { padding: 32px 22px }
+
+  .cta { padding: 60px 20px }
+  .cta-card { padding: 36px 22px; border-radius: 18px }
+  .cta-t { font-size: 22px; line-height: 1.4 }
+  .cta-d { font-size: 15px }
+  .cta-link { font-size: 14px; padding: 10px 22px }
+
+  footer { flex-direction: column; gap: 14px; padding: 24px 20px; text-align: center }
+  .ft-r { gap: 18px }
+}
 </style>
 </head>
 <body>

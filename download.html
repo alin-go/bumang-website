@@ -49,6 +49,36 @@ footer{padding:36px 60px;border-top:1px solid var(--border);display:flex;justify
 .ft-r{display:flex;gap:24px}
 .ft-r a{font-size:14px;color:var(--text2);text-decoration:none}
 .ft-r a:hover{color:var(--text)}
+
+/* ========== mobile ========== */
+@media (max-width: 768px) {
+  nav { padding: 0 16px; height: 60px }
+  .n-links { display: none }
+  .n-name { font-size: 18px }
+  .n-icon { width: 34px; height: 34px }
+  .n-btn { padding: 8px 16px; font-size: 14px }
+
+  .dl-hero { padding: 100px 20px 30px }
+  .dl-hero h1 { font-size: 32px; letter-spacing: -.5px }
+  .dl-hero p { font-size: 16px; line-height: 1.6 }
+
+  .dl-cards { padding: 30px 20px 60px; grid-template-columns: 1fr; gap: 16px }
+  .dl-card { padding: 32px 24px }
+  .dl-name { font-size: 21px }
+  .dl-sys { font-size: 15px }
+  .dl-info { padding: 16px 18px; margin-bottom: 22px }
+  .dl-info-row { font-size: 13px }
+  .dl-btn { padding: 13px 0; font-size: 16px }
+  .dl-ver { font-size: 12px }
+
+  .dl-note { padding: 0 20px 60px }
+  .dl-note-card { padding: 28px 22px }
+  .dl-note h3 { font-size: 18px }
+  .dl-note p { font-size: 14px; line-height: 1.7 }
+
+  footer { flex-direction: column; gap: 14px; padding: 24px 20px; text-align: center }
+  .ft-r { gap: 18px }
+}
 </style>
 </head>
 <body>
